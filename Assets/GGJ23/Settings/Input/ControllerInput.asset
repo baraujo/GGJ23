@@ -1,0 +1,59 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c611b23a41d3f284bbbc7481697218a2, type: 3}
+  m_Name: ControllerInput
+  m_EditorClassIdentifier: 
+  m_MovementAxes: {x: 0, y: 0}
+  m_MousePosition: {x: 0, y: 0}
+  m_GunRotation: {x: 0, y: 0}
+  m_JumpButton:
+    m_Pressed: 0
+    m_Released: 0
+    m_Held: 0
+  m_FireButton:
+    m_Pressed: 0
+    m_Released: 0
+    m_Held: 0
+  m_VacuumButton:
+    m_Pressed: 0
+    m_Released: 0
+    m_Held: 0
+  m_GameStartButton:
+    m_Pressed: 0
+    m_Released: 0
+    m_Held: 0
+  m_CreditsButton:
+    m_Pressed: 0
+    m_Released: 0
+    m_Held: 0
+  m_ReloadSceneButton:
+    m_Pressed: 0
+    m_Released: 0
+    m_Held: 0
+  m_ControlScheme: 0
+  m_UINavigate: {x: 0, y: 0}
+  m_UISubmit:
+    m_Pressed: 0
+    m_Released: 0
+    m_Held: 0
+  m_UICancel:
+    m_Pressed: 0
+    m_Released: 0
+    m_Held: 0
+  m_UIStartGame:
+    m_Pressed: 0
+    m_Released: 0
+    m_Held: 0
+  m_UICredits:
+    m_Pressed: 0
+    m_Released: 0
+    m_Held: 0
