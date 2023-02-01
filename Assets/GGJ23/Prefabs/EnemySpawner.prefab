@@ -48,13 +48,14 @@ MonoBehaviour:
   m_BossEnemyPrefab: {fileID: 5975378153679693422, guid: a78337ba4590ff242b1c7c9dc17fae40, type: 3}
   m_Waves:
   - m_NormalQuantity: 5
-    m_DelayBetweenEnemies: 0.5
+    m_DelayBetweenEnemies: 1
     m_BossQuantity: 1
-    m_DelayBetweenBosses: 0
+    m_DelayBetweenBosses: 2
   - m_NormalQuantity: 10
-    m_DelayBetweenEnemies: 0.25
+    m_DelayBetweenEnemies: 0.75
     m_BossQuantity: 2
-    m_DelayBetweenBosses: 0.5
-  m_DelayBetweenWaves: 1
+    m_DelayBetweenBosses: 2
+  m_DelayBetweenWaves: 10
+  m_InitialWaveDelay: 3
   m_Elapsed: 0
   m_SplineRef: {fileID: 0}

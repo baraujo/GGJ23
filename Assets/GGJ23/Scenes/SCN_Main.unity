@@ -35233,26 +35233,6 @@ PrefabInstance:
       propertyPath: m_SplineRef
       value: 
       objectReference: {fileID: 1542842889}
-    - target: {fileID: 6387898789011422929, guid: b1d039f8fb152394f881c429bb79db8e, type: 3}
-      propertyPath: m_DelayBetweenWaves
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 6387898789011422929, guid: b1d039f8fb152394f881c429bb79db8e, type: 3}
-      propertyPath: m_Waves.Array.data[0].m_DelayBetweenBosses
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6387898789011422929, guid: b1d039f8fb152394f881c429bb79db8e, type: 3}
-      propertyPath: m_Waves.Array.data[1].m_DelayBetweenBosses
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6387898789011422929, guid: b1d039f8fb152394f881c429bb79db8e, type: 3}
-      propertyPath: m_Waves.Array.data[0].m_DelayBetweenEnemies
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6387898789011422929, guid: b1d039f8fb152394f881c429bb79db8e, type: 3}
-      propertyPath: m_Waves.Array.data[1].m_DelayBetweenEnemies
-      value: 0.75
-      objectReference: {fileID: 0}
     - target: {fileID: 6387898789011422942, guid: b1d039f8fb152394f881c429bb79db8e, type: 3}
       propertyPath: m_Name
       value: EnemySpawner
