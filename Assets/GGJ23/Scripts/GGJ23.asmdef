@@ -3,7 +3,8 @@
     "rootNamespace": "GGJ23",
     "references": [
         "GUID:75469ad4d38634e559750d17036d5f7c",
-        "GUID:08689a96dd6d7864594359251ba038ef"
+        "GUID:08689a96dd6d7864594359251ba038ef",
+        "GUID:21d1eb854b91ade49bc69a263d12bee2"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
