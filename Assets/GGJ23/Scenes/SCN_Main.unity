@@ -35515,6 +35515,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1542842889}
     - target: {fileID: 6387898789011422929, guid: b1d039f8fb152394f881c429bb79db8e, type: 3}
+      propertyPath: m_InitialWaveDelay
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6387898789011422929, guid: b1d039f8fb152394f881c429bb79db8e, type: 3}
       propertyPath: m_Waves.Array.data[0].m_BossSpeed
       value: 35
       objectReference: {fileID: 0}

@@ -18,6 +18,7 @@ namespace GGJ23.Gameplay
         [SerializeField] private LayerMask m_CollisionMask = default;
 
         public int CurrentHealth => m_CurrentHealth;
+        public int InitialHealth => m_InitialHealth;
         public bool IsInvincible
         {
             get => m_IsInvincible;
