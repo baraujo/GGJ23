@@ -7,7 +7,7 @@ namespace GGJ23.Gameplay
     {
         private SplineAnimate m_SplineAnimate;
 
-        public SplineAnimate SplineRef
+        public SplineAnimate SplineAnimateRef
         {
             get { return m_SplineAnimate; }
             set { m_SplineAnimate = value; }               
@@ -20,12 +20,12 @@ namespace GGJ23.Gameplay
 
         public void TakeDamage()
         {
-            Debug.Log($"{name} says: AAUGH");
+            //Debug.Log($"{name} says: AAUGH");
         }
 
         public void Die()
         {
-            Debug.Log($"{name} died");
+            //Debug.Log($"{name} died");
             Destroy(gameObject);
         }
 

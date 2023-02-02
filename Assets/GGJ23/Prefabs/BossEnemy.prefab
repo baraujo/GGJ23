@@ -9,12 +9,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 855650892896656513, guid: e117e9d87740a094d98d3f0dc2b5ef6c, type: 3}
+      propertyPath: m_Method
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 855650892896656513, guid: e117e9d87740a094d98d3f0dc2b5ef6c, type: 3}
       propertyPath: m_Duration
-      value: 15
+      value: 14.999999
       objectReference: {fileID: 0}
     - target: {fileID: 855650892896656513, guid: e117e9d87740a094d98d3f0dc2b5ef6c, type: 3}
       propertyPath: m_MaxSpeed
-      value: 0.45733342
+      value: 0.13333337
       objectReference: {fileID: 0}
     - target: {fileID: 5640482023782007948, guid: e117e9d87740a094d98d3f0dc2b5ef6c, type: 3}
       propertyPath: m_RootOrder

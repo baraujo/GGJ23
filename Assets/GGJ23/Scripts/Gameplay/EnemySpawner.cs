@@ -11,8 +11,10 @@ namespace GGJ23.Gameplay
         public struct WaveParameters
         {
             public int m_NormalQuantity;
+            public float m_NormalEnemySpeed;
             public float m_DelayBetweenEnemies;
             public int m_BossQuantity;
+            public float m_BossSpeed;
             public float m_DelayBetweenBosses;
         }
 
@@ -46,8 +48,9 @@ namespace GGJ23.Gameplay
                     if (m_Elapsed > m_CurrentWave.m_DelayBetweenEnemies)
                     {
                         EnemyController enemy = Instantiate(m_NormalEnemyPrefab, transform.position, Quaternion.Euler(1, 1, 1), transform).GetComponent<EnemyController>();
-                        enemy.SplineRef.splineContainer = m_SplineRef;
-                        enemy.SplineRef.Play();
+                        enemy.SplineAnimateRef.splineContainer = m_SplineRef;
+                        enemy.SplineAnimateRef.duration = m_CurrentWave.m_NormalEnemySpeed;
+                        enemy.SplineAnimateRef.Play();
                         enemy.GetComponent<HealthManager>().Init();
                         m_CurrentWave.m_NormalQuantity--;
                         m_Elapsed = 0;
@@ -58,8 +61,9 @@ namespace GGJ23.Gameplay
                     if (m_Elapsed > m_CurrentWave.m_DelayBetweenBosses)
                     {
                         EnemyController enemy = Instantiate(m_BossEnemyPrefab, transform.position, Quaternion.Euler(1, 1, 1), transform).GetComponent<EnemyController>();
-                        enemy.SplineRef.splineContainer = m_SplineRef;
-                        enemy.SplineRef.Play();
+                        enemy.SplineAnimateRef.splineContainer = m_SplineRef;
+                        enemy.SplineAnimateRef.duration = m_CurrentWave.m_BossSpeed;
+                        enemy.SplineAnimateRef.Play();
                         enemy.GetComponent<HealthManager>().Init();
                         m_CurrentWave.m_BossQuantity--;
                         m_Elapsed = 0;
