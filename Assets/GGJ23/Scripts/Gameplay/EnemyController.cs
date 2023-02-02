@@ -35,7 +35,6 @@ namespace GGJ23.Gameplay
         }
 
         // TODO:
-        // Melee attacks - use some variation of Physics.Overlap to apply damage on a frame
         // Projectiles - collect code from Bright Light Escape
         // Gameplay: add gameplay states: running, game over, game won
         // Title screen: just make a separated scene and go with it

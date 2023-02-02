@@ -49,7 +49,7 @@ namespace GGJ23.Gameplay
                     {
                         EnemyController enemy = Instantiate(m_NormalEnemyPrefab, transform.position, Quaternion.Euler(1, 1, 1), transform).GetComponent<EnemyController>();
                         enemy.SplineAnimateRef.splineContainer = m_SplineRef;
-                        enemy.SplineAnimateRef.duration = m_CurrentWave.m_NormalEnemySpeed;
+                        enemy.SplineAnimateRef.maxSpeed = m_CurrentWave.m_NormalEnemySpeed;
                         enemy.SplineAnimateRef.Play();
                         enemy.GetComponent<HealthManager>().Init();
                         m_CurrentWave.m_NormalQuantity--;
@@ -62,7 +62,7 @@ namespace GGJ23.Gameplay
                     {
                         EnemyController enemy = Instantiate(m_BossEnemyPrefab, transform.position, Quaternion.Euler(1, 1, 1), transform).GetComponent<EnemyController>();
                         enemy.SplineAnimateRef.splineContainer = m_SplineRef;
-                        enemy.SplineAnimateRef.duration = m_CurrentWave.m_BossSpeed;
+                        enemy.SplineAnimateRef.maxSpeed = m_CurrentWave.m_BossSpeed;
                         enemy.SplineAnimateRef.Play();
                         enemy.GetComponent<HealthManager>().Init();
                         m_CurrentWave.m_BossQuantity--;
