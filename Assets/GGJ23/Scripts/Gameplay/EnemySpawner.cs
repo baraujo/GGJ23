@@ -45,9 +45,10 @@ namespace GGJ23.Gameplay
                 {
                     if (m_Elapsed > m_CurrentWave.m_DelayBetweenEnemies)
                     {
-                        EnemyController enemy = Instantiate(m_NormalEnemyPrefab, transform.position, Quaternion.identity, transform).GetComponent<EnemyController>();
+                        EnemyController enemy = Instantiate(m_NormalEnemyPrefab, transform.position, Quaternion.Euler(1, 1, 1), transform).GetComponent<EnemyController>();
                         enemy.SplineRef.splineContainer = m_SplineRef;
                         enemy.SplineRef.Play();
+                        enemy.GetComponent<HealthManager>().Init();
                         m_CurrentWave.m_NormalQuantity--;
                         m_Elapsed = 0;
                     }
@@ -56,9 +57,10 @@ namespace GGJ23.Gameplay
                 {
                     if (m_Elapsed > m_CurrentWave.m_DelayBetweenBosses)
                     {
-                        EnemyController enemy = Instantiate(m_BossEnemyPrefab, transform.position, Quaternion.identity, transform).GetComponent<EnemyController>();
+                        EnemyController enemy = Instantiate(m_BossEnemyPrefab, transform.position, Quaternion.Euler(1, 1, 1), transform).GetComponent<EnemyController>();
                         enemy.SplineRef.splineContainer = m_SplineRef;
                         enemy.SplineRef.Play();
+                        enemy.GetComponent<HealthManager>().Init();
                         m_CurrentWave.m_BossQuantity--;
                         m_Elapsed = 0;
                     }

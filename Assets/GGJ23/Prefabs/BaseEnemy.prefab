@@ -14,7 +14,9 @@ GameObject:
   - component: {fileID: 855650892896656513}
   - component: {fileID: 8539993425615852943}
   - component: {fileID: 2280309594219370733}
-  m_Layer: 0
+  - component: {fileID: 6593917390551676407}
+  - component: {fileID: 2508539824314553359}
+  m_Layer: 9
   m_Name: BaseEnemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29,7 +31,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9007397633494788927}
   m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0.33970243, y: 0, z: -13.720002}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -117,7 +119,7 @@ MonoBehaviour:
   m_LoopMode: 0
   m_Method: 0
   m_Duration: 10
-  m_MaxSpeed: 0.3430001
+  m_MaxSpeed: 0.10000001
   m_EasingMode: 0
   m_AlignmentMode: 1
   m_ObjectForwardAxis: 0
@@ -138,9 +140,9 @@ MonoBehaviour:
     m_EditModeType: 1
     m_Knots:
     - Position:
-        x: -3.43
+        x: 0
         y: 0
-        z: -0.08492512
+        z: 0
       TangentIn:
         x: 0
         y: 0
@@ -151,14 +153,14 @@ MonoBehaviour:
         z: 0
       Rotation:
         value:
-          x: 0
+          x: 0.9975094
           y: 0
           z: 0
-          w: 1
+          w: 0.07053457
     - Position:
-        x: -0.000000010123862
+        x: 1
         y: 0
-        z: -0.08492512
+        z: 0
       TangentIn:
         x: 0
         y: 0
@@ -169,11 +171,11 @@ MonoBehaviour:
         z: 0
       Rotation:
         value:
-          x: 0
+          x: 0.9975094
           y: 0
           z: 0
-          w: 1
-    m_Length: 3.4299996
+          w: 0.07053457
+    m_Length: 1
     m_Closed: 0
 --- !u!58 &2280309594219370733
 CircleCollider2D:
@@ -191,3 +193,75 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5000001
+--- !u!114 &6593917390551676407
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9007397633494788927}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e82c95b59216bd142ab778403e77978f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OnTakeDamage:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: -2402914845182163424}
+        m_TargetAssemblyTypeName: GGJ23.Gameplay.EnemyController, GGJ23
+        m_MethodName: TakeDamage
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  m_OnDeath:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: -2402914845182163424}
+        m_TargetAssemblyTypeName: GGJ23.Gameplay.EnemyController, GGJ23
+        m_MethodName: Die
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  m_OnRecoverHealth:
+    m_PersistentCalls:
+      m_Calls: []
+  m_InitialHealth: 2
+  m_CurrentHealth: 0
+  m_IsInvincible: 0
+  m_CollisionMask:
+    serializedVersion: 2
+    m_Bits: 256
+--- !u!50 &2508539824314553359
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9007397633494788927}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 1
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
