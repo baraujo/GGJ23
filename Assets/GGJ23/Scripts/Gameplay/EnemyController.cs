@@ -35,8 +35,6 @@ namespace GGJ23.Gameplay
         }
 
         // TODO:
-        // Projectiles - collect code from Bright Light Escape
-        // Projectile defense will have a radius, collect all targets w/ OverlapCircle and always aim at closest, fire at intervals
         // Gameplay: add gameplay states: running, game over, game won
         // Title screen: just make a separated scene and go with it
     }

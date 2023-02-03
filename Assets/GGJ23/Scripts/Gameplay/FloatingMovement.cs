@@ -21,11 +21,6 @@ namespace GGJ23.Gameplay
             m_Rigidbody = GetComponent<Rigidbody2D>();
         }
 
-        private void Start()
-        {
-            m_Displacement = transform.position;
-        }
-
         void FixedUpdate()
         {
             m_Displacement.x = m_Velocity.x * Time.fixedDeltaTime;

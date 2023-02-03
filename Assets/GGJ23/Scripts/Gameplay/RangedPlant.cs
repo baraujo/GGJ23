@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using GGJ23.Player;
+using System;
+using UnityEngine;
 
 namespace GGJ23.Gameplay
 {
@@ -6,10 +8,14 @@ namespace GGJ23.Gameplay
     {
         [SerializeField] private Transform m_Pivot = null;
         [SerializeField] private float m_AttackRadius = 5.0f;
+        [SerializeField] private float m_AttackDelay = 5.0f;
+        [SerializeField] private GameObject m_ProjectilePrefab = null;
+        [SerializeField] private Transform m_ProjectileExitPoint = null;
 
         private LayerMask m_Mask;
         private float m_AimAngle;
         private Vector3 m_NearestTargetDirection;
+        private float m_NextShotReady = 0;
 
         private void Start()
         {
@@ -33,15 +39,28 @@ namespace GGJ23.Gameplay
                 }
             }
 
-            if(m_NearestTargetDirection != null)
+            if(m_NearestTargetDirection != Vector3.zero)
             {
                 m_AimAngle = Mathf.RoundToInt(Mathf.Atan2(m_NearestTargetDirection.y, m_NearestTargetDirection.x) * Mathf.Rad2Deg);
-                m_Pivot.rotation = Quaternion.Lerp(m_Pivot.rotation, Quaternion.Euler(0, 0, m_AimAngle), 0.2f);
+                m_Pivot.rotation = Quaternion.Lerp(m_Pivot.rotation, Quaternion.Euler(0, 0, m_AimAngle), 0.3f);
+                m_NextShotReady += Time.deltaTime;
+                if(m_NextShotReady > m_AttackDelay)
+                {
+                    FireProjectile(m_Pivot.right);
+                    m_NextShotReady = 0;
+                }
             }
 
             // World position to plant things
             //var mouseDirection = Camera.main.ScreenToWorldPoint(m_Input.m_MousePosition) - transform.position;
         }
+
+        private void FireProjectile(Vector3 right)
+        {
+            var projectile = Instantiate(m_ProjectilePrefab, m_ProjectileExitPoint.position, Quaternion.identity, transform).GetComponent<ProjectileController>();
+            projectile.SetDirection(right);
+        }
+
 #if UNITY_EDITOR
         private void OnDrawGizmos()
         {
@@ -55,5 +74,6 @@ namespace GGJ23.Gameplay
 
         }
 #endif
+
     }
 }

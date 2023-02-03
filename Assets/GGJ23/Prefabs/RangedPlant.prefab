@@ -113,6 +113,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 936089666149298088}
+  - {fileID: 2999834966049094746}
   m_Father: {fileID: 5492123214997475933}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -246,5 +247,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2aa4524bd2af33548a59114b0e8e4e4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Input: {fileID: 11400000, guid: 71edfb803160aea4abc8b78d713c5850, type: 2}
   m_Pivot: {fileID: 3736622710425755808}
+  m_AttackRadius: 5
+  m_AttackDelay: 0.5
+  m_ProjectilePrefab: {fileID: 8694726454940014673, guid: 98392ecd362d8cc4d886132bd274421d, type: 3}
+  m_ProjectileExitPoint: {fileID: 2999834966049094746}
+--- !u!1 &8835622607532311172
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2999834966049094746}
+  m_Layer: 0
+  m_Name: ProjectileExitPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2999834966049094746
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8835622607532311172}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.71, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3736622710425755808}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
