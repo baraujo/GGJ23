@@ -161,6 +161,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76d4cf196fb1f9645b5c47f324738c88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_AttackInterval: 0.5
+  m_AttackInterval: 1
   m_AreaCenter: {fileID: 4395145700941272218}
-  m_AreaSize: {x: 3, y: 3}
+  m_AreaSize: {x: 4, y: 4}

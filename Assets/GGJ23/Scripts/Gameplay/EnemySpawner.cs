@@ -24,12 +24,15 @@ namespace GGJ23.Gameplay
         [SerializeField] private float m_DelayBetweenWaves;
         [SerializeField] private float m_InitialWaveDelay;
         [SerializeField] private SplineContainer m_SplineRef;
+        [SerializeField] private GameplayManagerRef m_GameplayManagerRef;
 
         private float m_Elapsed = 0;
         private bool m_WaveActive = false;
         private int m_WaveIndex = -1;
         private bool m_IsRunning = false;
         private WaveParameters m_CurrentWave = default;
+
+        public WaveParameters CurrentWave => m_CurrentWave;
 
         void Start()
         {
@@ -93,6 +96,7 @@ namespace GGJ23.Gameplay
             if (m_WaveIndex >= m_Waves.Length)
             {
                 Debug.Log("Game won!");
+                m_GameplayManagerRef.Ref.GameWon();
                 m_IsRunning = false;
             }
             else
@@ -102,6 +106,11 @@ namespace GGJ23.Gameplay
                 m_Elapsed = 0;
                 Debug.Log($"Starting wave {m_WaveIndex}");
             }
+        }
+
+        public void StopWaves()
+        {
+            m_IsRunning = false;
         }
     }
 }

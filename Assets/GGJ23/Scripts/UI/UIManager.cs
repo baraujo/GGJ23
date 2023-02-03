@@ -1,4 +1,5 @@
 using GGJ23.Player;
+using Newtonsoft.Json.Bson;
 using TMPro;
 using UnityEngine;
 
@@ -8,6 +9,7 @@ namespace GGJ23
     {
         [SerializeField] private PlantSpawner m_PlantSpawner;
         [SerializeField] TextMeshProUGUI m_CurrentTypeText;
+        [SerializeField] TextMeshProUGUI m_CurrentPlantReserveText;
 
         public void SelectRanged()
         {
@@ -19,6 +21,11 @@ namespace GGJ23
         {
             m_PlantSpawner.CurrentType = PlantSpawner.PlantType.Melee;
             m_CurrentTypeText.text = "Current plant: Melee";
+        }
+
+        public void UpdatePlantReserves(int reserve)
+        {
+            m_CurrentPlantReserveText.text = $"Available plants: {reserve}";
         }
     }
 }

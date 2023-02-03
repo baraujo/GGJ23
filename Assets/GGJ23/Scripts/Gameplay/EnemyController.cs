@@ -1,3 +1,4 @@
+using GGJ23.Utils;
 using UnityEngine;
 using UnityEngine.Splines;
 using UnityEngine.UI;
@@ -6,10 +7,12 @@ namespace GGJ23.Gameplay
 {
     public class EnemyController : MonoBehaviour
     {
-        [SerializeField] private Image m_HealthBarImage;
+        [SerializeField] private Image m_HealthBarImage = null;
+        [SerializeField] private GameplayManagerRef m_GameplayManagerRef = null;
 
         private SplineAnimate m_SplineAnimate;
         private HealthManager m_HealthManager;
+        private LayerMask m_ObjectiveLayer;
 
         public SplineAnimate SplineAnimateRef
         {
@@ -21,6 +24,17 @@ namespace GGJ23.Gameplay
         {
             m_SplineAnimate = GetComponent<SplineAnimate>();
             m_HealthManager = GetComponent<HealthManager>();
+            m_ObjectiveLayer = LayerMask.GetMask("EnemyObjective");
+        }
+
+        private void OnTriggerEnter2D(Collider2D collision)
+        {
+            if(LayerUtils.MatchesLayerMask(collision.gameObject, m_ObjectiveLayer))
+            {
+                Debug.Log("Enemy survived!!!!");
+                m_GameplayManagerRef.Ref.EnemySurvived();
+                m_SplineAnimate.enabled = false;
+            }
         }
 
         public void TakeDamage()

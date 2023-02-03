@@ -231,6 +231,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_HealthBarImage: {fileID: 3720136613758893220}
+  m_GameplayManagerRef: {fileID: 11400000, guid: 2772ad248c0271748a73cf84caac5a90, type: 2}
 --- !u!114 &6593917390551676407
 MonoBehaviour:
   m_ObjectHideFlags: 0

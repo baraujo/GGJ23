@@ -30,7 +30,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &6387898789011422929
 MonoBehaviour:
@@ -48,14 +48,18 @@ MonoBehaviour:
   m_BossEnemyPrefab: {fileID: 5975378153679693422, guid: a78337ba4590ff242b1c7c9dc17fae40, type: 3}
   m_Waves:
   - m_NormalQuantity: 5
+    m_NormalEnemySpeed: 0
     m_DelayBetweenEnemies: 1
     m_BossQuantity: 1
+    m_BossSpeed: 0
     m_DelayBetweenBosses: 2
   - m_NormalQuantity: 10
+    m_NormalEnemySpeed: 0
     m_DelayBetweenEnemies: 0.75
     m_BossQuantity: 2
+    m_BossSpeed: 0
     m_DelayBetweenBosses: 2
   m_DelayBetweenWaves: 10
   m_InitialWaveDelay: 3
-  m_Elapsed: 0
   m_SplineRef: {fileID: 0}
+  m_GameplayManagerRef: {fileID: 11400000, guid: 2772ad248c0271748a73cf84caac5a90, type: 2}
