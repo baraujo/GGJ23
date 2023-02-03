@@ -5,7 +5,7 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/GGJ23/Scenes/SampleScene.unity
-    guid: 8c9cfa26abfee488c85f1582747f6a02
+  - enabled: 1
+    path: Assets/GGJ23/Scenes/SCN_Main.unity
+    guid: 0e4d839ac0c3eb34793c6a18da94cc25
   m_configObjects: {}
