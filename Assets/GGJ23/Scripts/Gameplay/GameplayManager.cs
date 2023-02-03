@@ -5,7 +5,7 @@ namespace GGJ23.Gameplay
 {
     public class GameplayManager : MonoBehaviour
     {
-        [SerializeField] private ControllerInput m_Input = null;
+        //[SerializeField] private ControllerInput m_Input = null;
         [SerializeField] private GameplayManagerRef m_Ref = null;
         [SerializeField] private UIManager m_UI = null;
         [SerializeField] private EnemySpawner m_EnemySpawner = null;
@@ -13,14 +13,6 @@ namespace GGJ23.Gameplay
         private void Awake()
         {
             m_Ref.Ref = this;
-        }
-
-        private void Update()
-        {
-            if (m_Input.m_MouseClick.m_Pressed)
-            {
-                Debug.Log(Camera.main.ScreenToWorldPoint(m_Input.m_MousePosition) - transform.position);
-            }
         }
 
         public void EnemySurvived()
