@@ -8,7 +8,9 @@ namespace GGJ23.Input
     {
         // Player
         public Vector2 m_MovementAxes;
+        public Vector2 m_MousePosition;
         public ButtonState m_JumpButton;
+        public ButtonState m_MouseClick;
         public ControlScheme m_ControlScheme;
 
         // UI
@@ -24,7 +26,9 @@ namespace GGJ23.Input
         public void ResetState()
         {
             m_MovementAxes = Vector2.zero;
+            m_MousePosition = Vector2.zero;
             m_JumpButton.Reset();
+            m_MouseClick.Reset();
             
             m_UINavigate = Vector2.zero;
             m_UISubmit.Reset();

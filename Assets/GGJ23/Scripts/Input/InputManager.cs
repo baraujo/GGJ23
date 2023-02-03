@@ -44,6 +44,9 @@ namespace GGJ23.Input
         private InputAction m_UINavigateState = null;
         private InputAction m_UISubmitState = null;
         private InputAction m_UICancelState = null;
+        private InputAction m_MousePositionState = null;
+        private InputAction m_MouseClickState = null;
+
         //private InputAction m_UIStartGameState = null;
         //private InputAction m_UICreditsState = null;
 
@@ -57,9 +60,11 @@ namespace GGJ23.Input
             m_UINavigateState = m_PlayerInput.actions["Navigate"];
             m_UISubmitState = m_PlayerInput.actions["Submit"];
             m_UICancelState = m_PlayerInput.actions["Cancel"];
+            m_MousePositionState = m_PlayerInput.actions["MousePosition"];
+            m_MouseClickState = m_PlayerInput.actions["MouseClick"];
             //m_UIStartGameState = m_PlayerInput.actions["StartGame"];
             //m_UICreditsState = m_PlayerInput.actions["Credits"];
-    }
+        }
 
     private void Start()
     {
@@ -74,6 +79,8 @@ namespace GGJ23.Input
         m_ControllerInput.m_UINavigate = m_UINavigateState.ReadValue<Vector2>();
         m_ControllerInput.m_UISubmit.UpdateState(m_UISubmitState);
         m_ControllerInput.m_UICancel.UpdateState(m_UICancelState);
+        m_ControllerInput.m_MousePosition = m_MousePositionState.ReadValue<Vector2>();
+        m_ControllerInput.m_MouseClick.UpdateState(m_MouseClickState);
         //m_ControllerInput.m_UIStartGame.UpdateState(m_UIStartGameState);
         //m_ControllerInput.m_UICredits.UpdateState(m_UICreditsState);
 
