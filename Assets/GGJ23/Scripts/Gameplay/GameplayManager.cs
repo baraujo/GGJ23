@@ -97,6 +97,5 @@ namespace GGJ23.Gameplay
     }
 
     // TODO:
-    // Time to next wave como contagem regressiva
     // Clicar na planta faz ela sair da tela
 }
