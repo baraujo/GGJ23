@@ -12,13 +12,15 @@ namespace GGJ23.Gameplay
         {
             public int m_NormalQuantity;
             public float m_NormalEnemySpeed;
+            public GameObject m_NormalEnemyPrefab;
+            public int m_NormalEnemyHealth;
             public float m_DelayBetweenEnemies;
             public int m_BossQuantity;
             public float m_BossSpeed;
+            public int m_BossHealth;
             public float m_DelayBetweenBosses;
         }
 
-        [SerializeField] private GameObject m_NormalEnemyPrefab;
         [SerializeField] private GameObject m_BossEnemyPrefab;
         [SerializeField] private WaveParameters[] m_Waves;
         [SerializeField] private float m_DelayBetweenWaves;
@@ -50,11 +52,17 @@ namespace GGJ23.Gameplay
                 {
                     if (m_Elapsed > m_CurrentWave.m_DelayBetweenEnemies)
                     {
-                        EnemyController enemy = Instantiate(m_NormalEnemyPrefab, transform.position, Quaternion.Euler(1, 1, 1), transform).GetComponent<EnemyController>();
+                        EnemyController enemy = Instantiate(
+                            m_CurrentWave.m_NormalEnemyPrefab,
+                            transform.position,
+                            Quaternion.Euler(1, 1, 1),
+                            transform).GetComponent<EnemyController>();
                         enemy.SplineAnimateRef.splineContainer = m_SplineRef;
                         enemy.SplineAnimateRef.maxSpeed = m_CurrentWave.m_NormalEnemySpeed;
                         enemy.SplineAnimateRef.Play();
-                        enemy.GetComponent<HealthManager>().Init();
+                        var health = enemy.GetComponent<HealthManager>();
+                        health.InitialHealth = m_CurrentWave.m_NormalEnemyHealth;
+                        health.Init();
                         m_CurrentWave.m_NormalQuantity--;
                         m_Elapsed = 0;
                     }

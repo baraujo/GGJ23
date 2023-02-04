@@ -141,7 +141,7 @@ Transform:
   m_GameObject: {fileID: 5894301080851146053}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.733, z: 0}
-  m_LocalScale: {x: 4, y: 4, z: 1}
+  m_LocalScale: {x: 6, y: 6, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6758124483396075265}
@@ -248,4 +248,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_AttackInterval: 1
   m_AreaCenter: {fileID: 4395145700941272218}
-  m_AreaSize: {x: 4, y: 4}
+  m_AreaSize: {x: 6, y: 6}
