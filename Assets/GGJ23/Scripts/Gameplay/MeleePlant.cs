@@ -7,6 +7,8 @@ public class MeleePlant : MonoBehaviour
     [SerializeField] private float m_AttackInterval = 1f;
     [SerializeField] private Transform m_AreaCenter;
     [SerializeField] private Vector2 m_AreaSize = new Vector2(1f, 1f);
+    [SerializeField] private SpriteRenderer m_MainSprite;
+    [SerializeField] private GameObject m_Overlay;
 
     private bool m_IsRunning = true;
     private bool m_IsAttacking = false;
@@ -20,6 +22,7 @@ public class MeleePlant : MonoBehaviour
     {
         m_Mask = LayerMask.GetMask("Enemy");
         StartCoroutine(Attack());
+        StartCoroutine(FadeIn());
     }
 
     private IEnumerator Attack()
@@ -29,7 +32,9 @@ public class MeleePlant : MonoBehaviour
             yield return new WaitForSeconds(m_AttackInterval - 0.25f);
             m_IsAttacking = true;
             DoDamage();
+            m_Overlay.SetActive(true);
             yield return new WaitForSeconds(0.25f);
+            m_Overlay.SetActive(false);
             m_IsAttacking = false;
         }
     }
@@ -41,6 +46,28 @@ public class MeleePlant : MonoBehaviour
         {
             c.GetComponent<HealthManager>().TakeHit();
         }
+    }
+
+    private IEnumerator FadeIn()
+    {
+        Color startMain = m_MainSprite.color;
+        Color endMain = startMain;
+
+        startMain.a = 0;
+        m_MainSprite.color = startMain;
+
+        float elapsed = 0;
+        float duration = 0.25f;
+        while (elapsed < duration)
+        {
+            var step = elapsed / duration;
+            m_MainSprite.color = Color.Lerp(startMain, endMain, step);
+
+            elapsed += Time.deltaTime;
+            yield return null;
+        }
+
+        m_MainSprite.color = endMain;
     }
 
 #if UNITY_EDITOR

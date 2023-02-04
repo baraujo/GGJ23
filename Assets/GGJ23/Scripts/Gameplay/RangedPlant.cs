@@ -1,5 +1,5 @@
 ﻿using GGJ23.Player;
-using System;
+using System.Collections;
 using UnityEngine;
 
 namespace GGJ23.Gameplay
@@ -11,6 +11,8 @@ namespace GGJ23.Gameplay
         [SerializeField] private float m_AttackDelay = 5.0f;
         [SerializeField] private GameObject m_ProjectilePrefab = null;
         [SerializeField] private Transform m_ProjectileExitPoint = null;
+        [SerializeField] private SpriteRenderer m_MainSprite;
+        [SerializeField] private SpriteRenderer m_PivotSprite;
 
         private LayerMask m_Mask;
         private float m_AimAngle;
@@ -20,6 +22,7 @@ namespace GGJ23.Gameplay
         private void Start()
         {
             m_Mask = LayerMask.GetMask("Enemy");
+            StartCoroutine(FadeIn());    
         }
 
         private void Update()
@@ -60,6 +63,34 @@ namespace GGJ23.Gameplay
             var projectile = Instantiate(m_ProjectilePrefab, m_ProjectileExitPoint.position, Quaternion.identity, transform).GetComponent<ProjectileController>();
             projectile.SetDirection(right);
         }
+
+        private IEnumerator FadeIn()
+        {
+            Color startMain = m_MainSprite.color;
+            Color startPivot = m_PivotSprite.color;
+            Color endMain = startMain;
+            Color endPivot = startPivot;
+
+            startMain.a = 0;
+            startPivot.a = 0;
+            m_MainSprite.color = startMain;
+            m_PivotSprite.color = startPivot;
+
+            float elapsed = 0;
+            float duration = 0.25f;
+            while(elapsed < duration)
+            {
+                var step = elapsed / duration;
+                m_MainSprite.color = Color.Lerp(startMain, endMain, step);
+                m_PivotSprite.color = Color.Lerp(startPivot, endPivot, step);
+
+                elapsed += Time.deltaTime;
+                yield return null;
+            }
+            m_MainSprite.color = endMain;
+            m_PivotSprite.color = endPivot;
+        }
+
 
 #if UNITY_EDITOR
         private void OnDrawGizmos()

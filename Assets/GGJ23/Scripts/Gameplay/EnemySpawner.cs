@@ -55,7 +55,7 @@ namespace GGJ23.Gameplay
                         EnemyController enemy = Instantiate(
                             m_CurrentWave.m_NormalEnemyPrefab,
                             transform.position,
-                            Quaternion.Euler(1, 1, 1),
+                            Quaternion.Euler(1, 1, 1),  
                             transform).GetComponent<EnemyController>();
                         enemy.SplineAnimateRef.splineContainer = m_SplineRef;
                         enemy.SplineAnimateRef.maxSpeed = m_CurrentWave.m_NormalEnemySpeed;

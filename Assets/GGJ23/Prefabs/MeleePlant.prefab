@@ -131,7 +131,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7953785552439658673
 Transform:
   m_ObjectHideFlags: 0
@@ -189,7 +189,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 10
   m_Sprite: {fileID: 21300000, guid: f6a69d7f79bee944eb89b7dbace9cadd, type: 3}
-  m_Color: {r: 0.2867545, g: 1, b: 0.2783019, a: 0.16862746}
+  m_Color: {r: 0.9056604, g: 0.026878523, b: 0, a: 0.3254902}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -249,3 +249,5 @@ MonoBehaviour:
   m_AttackInterval: 1
   m_AreaCenter: {fileID: 4395145700941272218}
   m_AreaSize: {x: 6, y: 6}
+  m_MainSprite: {fileID: 4129240954301660772}
+  m_Overlay: {fileID: 5894301080851146053}
