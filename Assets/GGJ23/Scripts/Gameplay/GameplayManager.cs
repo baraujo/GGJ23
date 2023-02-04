@@ -42,4 +42,13 @@ namespace GGJ23.Gameplay
             m_UI.UpdatePlantReserves(reserve);
         }
     }
+
+    // TODO:
+    // Espaços fixos para plantar - 12 espaços
+    // Plantas serão um botão com cooldown ilimitado - truque da UI
+    // Cooldown radial ou de cima pra baixo com overlay preto e branco ou escurecido
+    // Time to next wave como contagem regressiva
+    // Remover available plants
+    // Indicar quais são esses espaços
+    // Clicar na planta faz ela sair da tela
 }
