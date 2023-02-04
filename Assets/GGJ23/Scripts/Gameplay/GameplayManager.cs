@@ -57,7 +57,7 @@ namespace GGJ23.Gameplay
             }
             else
             {
-                Debug.Log("The farm is destroyed!");
+                UpdateNextWaveText("The farm is destroyed!");
                 m_EnemySpawner.StopWaves();
                 // Game over!
             }
@@ -65,29 +65,34 @@ namespace GGJ23.Gameplay
 
         public void GameWon()
         {
-            Debug.Log("All enemies defeated!!!!!");
+            UpdateNextWaveText("All enemies defeated!!!!!");
             m_EnemySpawner.StopWaves();
             // Game won!
         }
 
-        internal bool CanPlaceMelee()
+        public bool CanPlaceMelee()
         {
             return m_MeleeElapsed >= m_MeleeCooldown;
         }
 
-        internal bool CanPlaceRanged()
+        public bool CanPlaceRanged()
         {
             return m_RangedElapsed >= m_RangedCooldown;
         }
 
-        internal void TriggerMeleeCooldown()
+        public void TriggerMeleeCooldown()
         {
             m_MeleeElapsed = 0;
         }
 
-        internal void TriggerRangedCooldown()
+        public void TriggerRangedCooldown()
         {
             m_RangedElapsed = 0;
+        }
+
+        public void UpdateNextWaveText(string text)
+        {
+            m_UI.UpdateNextWaveText(text);
         }
     }
 

@@ -47,6 +47,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_MeleeOverlay: {fileID: 1166500672720162985}
   m_RangedOverlay: {fileID: 7440280012752401825}
+  m_WaveText: {fileID: 3854694518506165246}
 --- !u!1001 &3283883849437045014
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -264,6 +265,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &3854694518506165246 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1795831016856941288, guid: cad07cafe4111854896c98765b9778c4, type: 3}
+  m_PrefabInstance: {fileID: 3283883849437045014}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &7440280012752401825 stripped
