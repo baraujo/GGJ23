@@ -751,6 +751,8 @@ MonoBehaviour:
   m_UI: {fileID: 1898489633}
   m_EnemySpawner: {fileID: 1814335491}
   m_SurvivingEnemyLimit: 5
+  m_MeleeCooldown: 5
+  m_RangedCooldown: 5
 --- !u!1001 &1123809132
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -35998,7 +36000,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4199664817719765559, guid: 44d96392b8589894dbbd4c47d3e039b5, type: 3}
       propertyPath: m_Name
-      value: GameManager
+      value: GameplayManager
       objectReference: {fileID: 0}
     - target: {fileID: 4199664818440384961, guid: 44d96392b8589894dbbd4c47d3e039b5, type: 3}
       propertyPath: m_Spline.m_Knots.Array.data[2].Position.x

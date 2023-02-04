@@ -1,31 +1,17 @@
-using GGJ23.Player;
-using Newtonsoft.Json.Bson;
-using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace GGJ23
 {
     public class UIManager : MonoBehaviour
     {
-        [SerializeField] private PlantSpawner m_PlantSpawner;
-        [SerializeField] TextMeshProUGUI m_CurrentTypeText;
-        [SerializeField] TextMeshProUGUI m_CurrentPlantReserveText;
+        [SerializeField] private Image m_MeleeOverlay;
+        [SerializeField] private Image m_RangedOverlay;
 
-        public void SelectRanged()
+        public void UpdatePlantCooldowns(float meleeFactor, float rangedFactor)
         {
-            m_PlantSpawner.CurrentType = PlantSpawner.PlantType.Ranged;
-            m_CurrentTypeText.text = "Current plant: Ranged";
-        }
-
-        public void SelectMelee()
-        {
-            m_PlantSpawner.CurrentType = PlantSpawner.PlantType.Melee;
-            m_CurrentTypeText.text = "Current plant: Melee";
-        }
-
-        public void UpdatePlantReserves(int reserve)
-        {
-            m_CurrentPlantReserveText.text = $"Available plants: {reserve}";
+            m_MeleeOverlay.fillAmount = 1 - meleeFactor;
+            m_RangedOverlay.fillAmount = 1 - rangedFactor;
         }
     }
 }
