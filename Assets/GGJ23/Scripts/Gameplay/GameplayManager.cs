@@ -18,10 +18,12 @@ namespace GGJ23.Gameplay
 
         private float m_MeleeElapsed;
         private float m_RangedElapsed;
+        private AudioSource m_BGMSource;
 
         private void Awake()
         {
             m_Ref.Ref = this;
+            m_BGMSource = GetComponentInChildren<AudioSource>();
         }
 
         private void Start()
@@ -98,10 +100,8 @@ namespace GGJ23.Gameplay
         public void StartGame()
         {
             m_EnemySpawner.TriggerNextWave(m_InitialWaveDelay);
+            m_BGMSource.volume = 0.5f;
         }
 
     }
-
-    // TODO:
-    // Clicar na planta faz ela sair da tela
 }
