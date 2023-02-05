@@ -24,7 +24,6 @@ namespace GGJ23.Gameplay
         [SerializeField] private GameObject m_BossEnemyPrefab;
         [SerializeField] private WaveParameters[] m_Waves;
         [SerializeField] private float m_DelayBetweenWaves;
-        [SerializeField] private float m_InitialWaveDelay;
         [SerializeField] private SplineContainer m_SplineRef;
         [SerializeField] private GameplayManagerRef m_GameplayManagerRef;
 
@@ -39,7 +38,6 @@ namespace GGJ23.Gameplay
         void Start()
         {
             m_IsRunning = true;
-            StartCoroutine(TriggerNextWaveRoutine(m_InitialWaveDelay));
         }
 
         void Update()
@@ -123,6 +121,11 @@ namespace GGJ23.Gameplay
                 Debug.Log($"Starting wave {m_WaveIndex}");
                 m_GameplayManagerRef.Ref.UpdateNextWaveText($"Wave {m_WaveIndex + 1}");
             }
+        }
+
+        public void TriggerNextWave(float delay)
+        {
+            StartCoroutine(TriggerNextWaveRoutine(delay));
         }
 
         public void StopWaves()

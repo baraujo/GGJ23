@@ -1,5 +1,4 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace GGJ23.Gameplay
 {
@@ -11,6 +10,7 @@ namespace GGJ23.Gameplay
         [SerializeField] private UIManager m_UI = null;
         [SerializeField] private EnemySpawner m_EnemySpawner = null;
         [SerializeField] private int m_SurvivingEnemyLimit = 5;
+        [SerializeField] private float m_InitialWaveDelay = 10;
 
         [Header("Cooldowns")]
         [SerializeField] private float m_MeleeCooldown = 5;
@@ -59,7 +59,7 @@ namespace GGJ23.Gameplay
             {
                 UpdateNextWaveText("The farm is destroyed!");
                 m_EnemySpawner.StopWaves();
-                // Game over!
+                m_UI.GameOver();
             }
         }
 
@@ -67,7 +67,7 @@ namespace GGJ23.Gameplay
         {
             UpdateNextWaveText("All enemies defeated!!!!!");
             m_EnemySpawner.StopWaves();
-            // Game won!
+            m_UI.GameWon();
         }
 
         public bool CanPlaceMelee()
@@ -94,6 +94,12 @@ namespace GGJ23.Gameplay
         {
             m_UI.UpdateNextWaveText(text);
         }
+
+        public void StartGame()
+        {
+            m_EnemySpawner.TriggerNextWave(m_InitialWaveDelay);
+        }
+
     }
 
     // TODO:
