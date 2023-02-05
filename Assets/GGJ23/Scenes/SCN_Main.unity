@@ -1959,7 +1959,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6387898789011422928, guid: b1d039f8fb152394f881c429bb79db8e, type: 3}
       propertyPath: m_RootOrder
-      value: 14
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 6387898789011422928, guid: b1d039f8fb152394f881c429bb79db8e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3896,7 +3896,7 @@ Transform:
   m_Children:
   - {fileID: 19144273}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1278050812
 PrefabInstance:
@@ -5212,7 +5212,7 @@ Transform:
   - {fileID: 1086949434}
   - {fileID: 1724206527}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1542842889 stripped
 MonoBehaviour:
@@ -41408,6 +41408,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: UI
       objectReference: {fileID: 0}
+    - target: {fileID: 5820917521681367515, guid: a1d8be11e3900554eae696fb70c74f70, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: a1d8be11e3900554eae696fb70c74f70, type: 3}
@@ -41549,7 +41553,7 @@ PrefabInstance:
       objectReference: {fileID: 1814335491}
     - target: {fileID: 4199664817719765448, guid: 44d96392b8589894dbbd4c47d3e039b5, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4199664817719765448, guid: 44d96392b8589894dbbd4c47d3e039b5, type: 3}
       propertyPath: m_LocalPosition.x
