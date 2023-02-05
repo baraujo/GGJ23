@@ -29,6 +29,12 @@ namespace GGJ23
             m_WaveText.text = text;
         }
 
+        private void Start()
+        {
+            m_TitleCanvas.gameObject.SetActive(true);
+
+        }
+
         public void StartGame()
         {
             m_TitleCanvas.gameObject.SetActive(false);
