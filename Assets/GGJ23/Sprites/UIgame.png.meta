@@ -350,7 +350,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UIgame_11
+      name: Billboard
       rect:
         serializedVersion: 2
         x: 402
@@ -619,9 +619,9 @@ TextureImporter:
       Ranged: 1869597448
       TryAgain: -1329216800
       UIgame_19: -1596998139
-      UIgame_11: 88264670
       StartGame: 1921782335
       RangedOverlay: 541838646
+      Billboard: 88264670
       UIgame_6: -2143808181
       GameOver: -1939350332
       UIgame_9: 1697074319
