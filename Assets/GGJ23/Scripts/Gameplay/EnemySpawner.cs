@@ -97,7 +97,7 @@ namespace GGJ23.Gameplay
             while(elapsed < delay)
             {
                 step = delay - elapsed;
-                m_GameplayManagerRef.Ref.UpdateNextWaveText($"Time to next wave: {step:0.00}");
+                m_GameplayManagerRef.Ref.UpdateNextWaveText($"{step:0.00}");
                 elapsed += Time.deltaTime;
                 yield return null;
             }
@@ -109,7 +109,6 @@ namespace GGJ23.Gameplay
             m_WaveIndex++;
             if (m_WaveIndex >= m_Waves.Length)
             {
-                m_GameplayManagerRef.Ref.UpdateNextWaveText("Game won!");
                 m_GameplayManagerRef.Ref.GameWon();
                 m_IsRunning = false;
             }
@@ -119,7 +118,6 @@ namespace GGJ23.Gameplay
                 m_CurrentWave = m_Waves[m_WaveIndex];
                 m_Elapsed = 0;
                 Debug.Log($"Starting wave {m_WaveIndex}");
-                m_GameplayManagerRef.Ref.UpdateNextWaveText($"Wave {m_WaveIndex + 1}");
             }
         }
 

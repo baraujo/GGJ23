@@ -59,7 +59,6 @@ namespace GGJ23.Gameplay
             }
             else
             {
-                UpdateNextWaveText("The farm is destroyed!");
                 m_EnemySpawner.StopWaves();
                 m_UI.GameOver();
             }
@@ -67,7 +66,6 @@ namespace GGJ23.Gameplay
 
         public void GameWon()
         {
-            UpdateNextWaveText("All enemies defeated!!!!!");
             m_EnemySpawner.StopWaves();
             m_UI.GameWon();
         }
