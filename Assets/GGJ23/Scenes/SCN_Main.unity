@@ -3547,8 +3547,8 @@ MonoBehaviour:
   m_EnemySpawner: {fileID: 1814335491}
   m_SurvivingEnemyLimit: 5
   m_InitialWaveDelay: 10
-  m_MeleeCooldown: 5
-  m_RangedCooldown: 5
+  m_MeleeCooldown: 10
+  m_RangedCooldown: 10
 --- !u!1001 &1101396947
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -42090,6 +42090,10 @@ PrefabInstance:
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6387898789011422929, guid: b1d039f8fb152394f881c429bb79db8e, type: 3}
+      propertyPath: m_Waves.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6387898789011422929, guid: b1d039f8fb152394f881c429bb79db8e, type: 3}
       propertyPath: m_DelayBetweenWaves
       value: 10
       objectReference: {fileID: 0}
@@ -42099,7 +42103,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6387898789011422929, guid: b1d039f8fb152394f881c429bb79db8e, type: 3}
       propertyPath: m_Waves.Array.data[1].m_BossSpeed
-      value: 3.5
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6387898789011422929, guid: b1d039f8fb152394f881c429bb79db8e, type: 3}
+      propertyPath: m_Waves.Array.data[2].m_BossSpeed
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6387898789011422929, guid: b1d039f8fb152394f881c429bb79db8e, type: 3}
       propertyPath: m_Waves.Array.data[0].m_BossHealth
@@ -42110,8 +42118,16 @@ PrefabInstance:
       value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 6387898789011422929, guid: b1d039f8fb152394f881c429bb79db8e, type: 3}
+      propertyPath: m_Waves.Array.data[2].m_BossHealth
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6387898789011422929, guid: b1d039f8fb152394f881c429bb79db8e, type: 3}
       propertyPath: m_Waves.Array.data[1].m_BossQuantity
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6387898789011422929, guid: b1d039f8fb152394f881c429bb79db8e, type: 3}
+      propertyPath: m_Waves.Array.data[2].m_BossQuantity
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6387898789011422929, guid: b1d039f8fb152394f881c429bb79db8e, type: 3}
       propertyPath: m_Waves.Array.data[0].m_NormalQuantity
@@ -42122,12 +42138,20 @@ PrefabInstance:
       value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 6387898789011422929, guid: b1d039f8fb152394f881c429bb79db8e, type: 3}
+      propertyPath: m_Waves.Array.data[2].m_NormalQuantity
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 6387898789011422929, guid: b1d039f8fb152394f881c429bb79db8e, type: 3}
       propertyPath: m_Waves.Array.data[0].m_NormalEnemySpeed
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6387898789011422929, guid: b1d039f8fb152394f881c429bb79db8e, type: 3}
       propertyPath: m_Waves.Array.data[1].m_NormalEnemySpeed
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6387898789011422929, guid: b1d039f8fb152394f881c429bb79db8e, type: 3}
+      propertyPath: m_Waves.Array.data[2].m_NormalEnemySpeed
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6387898789011422929, guid: b1d039f8fb152394f881c429bb79db8e, type: 3}
       propertyPath: m_Waves.Array.data[0].m_NormalEnemyHealth
@@ -42146,16 +42170,32 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 5964677831028183501, guid: 13bc67063c511fd4685dfabdb18a8a48, type: 3}
     - target: {fileID: 6387898789011422929, guid: b1d039f8fb152394f881c429bb79db8e, type: 3}
+      propertyPath: m_Waves.Array.data[2].m_NormalEnemyHealth
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6387898789011422929, guid: b1d039f8fb152394f881c429bb79db8e, type: 3}
+      propertyPath: m_Waves.Array.data[2].m_NormalEnemyPrefab
+      value: 
+      objectReference: {fileID: 5964677831028183501, guid: 345ce0d7c32c43c46b4a71740a12981e, type: 3}
+    - target: {fileID: 6387898789011422929, guid: b1d039f8fb152394f881c429bb79db8e, type: 3}
       propertyPath: m_Waves.Array.data[1].m_DelayBetweenBosses
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6387898789011422929, guid: b1d039f8fb152394f881c429bb79db8e, type: 3}
+      propertyPath: m_Waves.Array.data[2].m_DelayBetweenBosses
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6387898789011422929, guid: b1d039f8fb152394f881c429bb79db8e, type: 3}
       propertyPath: m_Waves.Array.data[0].m_DelayBetweenEnemies
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6387898789011422929, guid: b1d039f8fb152394f881c429bb79db8e, type: 3}
       propertyPath: m_Waves.Array.data[1].m_DelayBetweenEnemies
-      value: 0.4
+      value: 0.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6387898789011422929, guid: b1d039f8fb152394f881c429bb79db8e, type: 3}
+      propertyPath: m_Waves.Array.data[2].m_DelayBetweenEnemies
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 6387898789011422942, guid: b1d039f8fb152394f881c429bb79db8e, type: 3}
       propertyPath: m_Name
